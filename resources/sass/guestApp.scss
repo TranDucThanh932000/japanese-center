@@ -1,0 +1,11 @@
+@import "~bootstrap/scss/bootstrap";
+
+@import "guest/abstracts/mixins";
+@import "guest/abstracts/variables";
+
+@import "guest/layout/header";
+@import "guest/layout/footer";
+
+@import "guest/homepage/index";
+
+@import "guest/base/common"

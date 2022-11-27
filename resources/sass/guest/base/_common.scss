@@ -1,0 +1,84 @@
+.mw-1200{
+    max-width: 1200px;
+}
+
+.center{
+    margin: 0px auto;
+}
+
+ul { 
+    margin: 0px;
+    li {
+        padding: 5px;
+        span {
+            text-transform: uppercase;
+        }
+    }
+}
+
+#wrap {
+    font: 16px/1.7 'Montserrat',Arial,Sans-Serif;
+}
+
+.text-red{
+    color: #e21e26;
+}
+
+.text-white{
+    color: white;
+}
+
+.bolder{
+    font-weight: bolder;
+}
+
+.text-italic{
+    font-style: italic;
+}
+
+.m-l-4{
+    margin-left: 16px;
+}
+
+.pd-10 {
+    padding: 10px;
+}
+
+.bg-pink{
+    background-color: #fef1f2;
+}
+
+.w-40{
+    width: 40%;
+}
+
+.w-20{
+    width: 20%;
+}
+
+.w-48{
+    width: 48%;
+}
+
+.w-50{
+    width: 50%;
+}
+
+.w-30{
+    width: 30%;
+}
+.w-35{
+    width: 35%;
+}
+.w-25{
+    width: 25%;
+}
+.bg-white{
+    background-color: white;
+}
+.w-475{
+    width: 47.5%;
+}
+.h-100{
+    height: 100%;
+}

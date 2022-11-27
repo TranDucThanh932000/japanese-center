@@ -1,0 +1,177 @@
+#body{
+    width: 100%;
+    .banner {
+        img {
+            width: 100%;
+        }
+    }
+
+    #journey {
+        background: url('https://trungtamnhatngu.edu.vn/gioi-thieu/themes/default/images/bg-ls.png');
+        .cd-timeline__block{
+            display: flex;
+            align-items: center;
+            .timeline__img{
+                display: inline-block;
+                position: relative;
+                z-index: 1;
+                img {
+                    width: 148px;
+                    height: 166px;
+                }
+                p {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    margin: 0px;
+                    color: #ffc70f;
+                }
+                .l-2 {
+                    padding-right: 10px;
+                    padding-bottom: 10px;
+                }
+            }
+            .timeline__content{
+                display: inline-block;
+                width: 45%;
+            }
+        }
+    }
+
+    .su-menh-child{
+        h2 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        margin-left: 10px;
+        margin-right: 10px;
+        div:first-child{
+            text-align: center;
+        }
+    }
+
+    .su-menh-child:first-child{
+        margin-left: 0;
+    }
+
+    .su-menh-child:last-child{
+        margin-right: 0;
+    }
+
+    .image__right{
+        color: #fff;
+        img{
+            object-fit: cover;
+        }
+    }
+
+    .product__service{
+        .border{
+            border: 1px solid grey;
+        }
+        .b_radius{
+            border-radius: 10px;
+        }
+        .box-sd{
+            box-shadow: 0px 5px 5px gray;
+        }
+    }
+    .quality_lecturer{
+        .bg-num{
+            background: url('https://trungtamnhatngu.edu.vn/gioi-thieu/themes/default/images/bg-num.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-top: -32px;
+            height: 40px;
+            h5 {
+                height: 34px;
+                line-height: 34px;
+                font-weight: 500;
+                color: white;
+            }
+        }
+        .flex-gap {
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: 5%;
+        }
+        .border{
+            border: 1px solid grey;
+        }
+        .b_radius{
+            border-radius: 10px;
+        }
+        .bar{
+            position: relative;
+        }
+        .bar::before{
+            content: '';
+            position: absolute;
+            width: 72px;
+            height: 8px;
+            border-radius: 4px;
+            left: calc(50% - 36px);
+            bottom: -1px;
+            background: #e41e25;
+        }
+    }
+    .level{
+        background: url('https://trungtamnhatngu.edu.vn/gioi-thieu/themes/default/images/bg-dt.png');
+        .flex-grap-2{
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: 2%;
+        }
+        .border{
+            border: 1px solid grey;
+        }
+        .b_radius{
+            border-radius: 10px;
+        }
+        .infor{
+            font-size: 48px;
+            position: absolute;
+            width: 240px;
+            top: 60px;
+            right: 0;
+            line-height: 1.4;
+        }
+        .infor2{
+            font-size: 20px;
+            position: absolute;
+            width: 240px;
+            top: 120px;
+            right: 0;
+            line-height: 1.4;
+        }
+        .flex-grap{
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: 5%;
+        }
+        .mau1 {
+            background: linear-gradient(90deg,#0052D4 0%,#4364F7 50%,#6FB1FC 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .mau2 {
+            background: linear-gradient(90deg,#E65C00 0%,#F9D423 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .mau3 {
+            background: linear-gradient(90deg,#5C258D 0%,#4389A2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+        }
+        .mau4 {
+            background: linear-gradient(90deg,#16A085 0%,#F4D03F 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    .box-sd{
+        box-shadow: 0px 5px 5px rgb(202, 191, 191);
+    }
+}
