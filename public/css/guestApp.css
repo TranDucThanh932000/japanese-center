@@ -10820,7 +10820,6 @@ textarea.form-control-lg {
   }
 }
 #header {
-  position: sticky;
   top: 0;
   left: 0;
   z-index: 9999;
@@ -10838,6 +10837,43 @@ textarea.form-control-lg {
 }
 #header img {
   width: 29.16666667%;
+}
+#header #menu_icon {
+  display: none;
+}
+#header #menu_icon i {
+  margin-right: 5px;
+}
+@media screen and (max-width: 576px) {
+  #header #wrap_header {
+    justify-content: space-between;
+    position: relative;
+  }
+  #header #item_header #menu_icon {
+    display: block;
+    cursor: pointer;
+  }
+  #header .d_none_menu {
+    flex-grow: 0 !important;
+  }
+  #header .d_none_menu ul li {
+    display: none !important;
+  }
+  #header .show_menu {
+    flex-grow: 0 !important;
+  }
+  #header .show_menu ul {
+    display: block !important;
+    position: absolute;
+    top: 98%;
+    right: 0;
+    left: 0;
+    text-align: right;
+    background-color: white;
+  }
+  #header .show_menu ul li {
+    display: block !important;
+  }
 }
 
 #footer {
@@ -10928,6 +10964,10 @@ textarea.form-control-lg {
 #body #journey .cd-timeline__block .timeline__content {
   display: inline-block;
   width: 45%;
+}
+#body #journey .cd-timeline__block .even_year {
+  padding-right: 0px !important;
+  margin-left: 5px !important;
 }
 #body .su-menh-child {
   margin-left: 10px;
@@ -11032,7 +11072,6 @@ textarea.form-control-lg {
 #body .level .flex-grap {
   display: inline-flex;
   flex-wrap: wrap;
-  gap: 5%;
 }
 #body .level .mau1 {
   background: linear-gradient(90deg, #0052D4 0%, #4364F7 50%, #6FB1FC 100%);
@@ -11056,6 +11095,43 @@ textarea.form-control-lg {
 }
 #body .box-sd {
   box-shadow: 0px 5px 5px rgb(202, 191, 191);
+}
+#body #product__service_sp {
+  display: none;
+}
+@media screen and (max-width: 576px) {
+  #body .infor {
+    font-size: 24px !important;
+    top: 35px !important;
+    right: -30px !important;
+  }
+  #body .infor2 {
+    font-size: 15px !important;
+    top: 85px !important;
+    right: -30px !important;
+  }
+  #body #about_us div {
+    padding: 0 !important;
+  }
+  #body #about_us div:not(:first-child) {
+    padding: 10px !important;
+    margin: 0 !important;
+  }
+  #body #product__service {
+    display: none;
+  }
+  #body #product__service_sp {
+    display: block;
+  }
+  #body #product__service_sp .width_logo_sp {
+    width: 72px !important;
+  }
+  #body #product__service_sp .carousel-item {
+    height: 502px !important;
+  }
+  #body #su-menh {
+    padding: 10px !important;
+  }
 }
 
 .mw-1200 {

@@ -1,14 +1,14 @@
 <template>
     <div id="wrap">
         <div id="header">
-            <div class="d-flex mw-1200 center">
+            <div class="d-flex mw-1200 center" id="wrap_header">
                 <img class="pd-10" src="https://trungtamnhatngu.edu.vn/gioi-thieu/images/logo-nhat-ngu-sofl-1.png" alt="">
-                <div class="d-flex align-items-center flex-grow-1">
+                <div class="d-flex align-items-center flex-grow-1 d_none_menu" id="item_header">
+                    <div id="menu_icon" @click="showMenu()"><i class="fa fa-bars" aria-hidden="true"></i></div>
                     <ul class="d-flex justify-content-center justify-content-between w-100">
                         <li @click="scrollToCourseIntro('about_us')"><span><b>Giới thiệu</b></span></li>
                         <li @click="scrollToCourseIntro('journey')"><span><b>Lịch sử</b></span></li>
                         <li @click="scrollToCourseIntro('view-point')"><span><b>Tầm nhìn & sứ mệnh</b></span></li>
-                        <li @click="scrollToCourseIntro('gia_tri_cot_loi')"><span><b>Giá trị cốt lõi</b></span></li>
                         <li @click="scrollToCourseIntro('product__service')"><span><b>Sản phẩm</b></span></li>
                         <li @click="scrollToCourseIntro('level')"><span><b>Cấp độ đào tạo</b></span></li>
                     </ul>
@@ -19,21 +19,23 @@
             <div class="banner">
                 <img src="https://trungtamnhatngu.edu.vn/gioi-thieu/uploads/slides/trung-tam-tieng-nhat-sofl_2.jpg" alt="">
             </div>
-            <div id="about_us" class="d-flex mw-1200 center mt-4 mb-4">
-                <div class="video w-50">
+            <div id="about_us" class="d-flex mw-1200 center mt-4 mb-4 row">
+                <div class="col-sm-12 col-md-6 p-0">
                     <video controls width="100%" src="https://trungtamnhatngu.edu.vn/gioi-thieu/uploads/video-nhat.mp4"></video>
                 </div>
-                <div class="w-50 m-l-4 mt-4">
-                    <h1 class="text-red bolder">VỀ CHÚNG TÔI</h1>
-                    <p class="m-0">Trung tâm Nhật ngữ SOFL thành lập năm 2008, được cấp giấy phép Đào tạo số 2330/QĐ – SGD & ĐT Hà Nội của Sở giáo dục và Đào tạo Hà Nội. Trải qua 13 năm hoạt động, với bao nỗ lực không ngừng nghỉ, đến nay SOFL đã có 9 cơ sở tại Hà Nội, Tp. Hồ Chí Minh và Ninh Bình cùng 2 giải thưởng danh giá:</p>
-                    <ul>
-                        <li><span><b>CHỨNG NHẬN DỊCH VỤ HOÀN HẢO</b></span></li>
-                    </ul>
-                    <p class="m-0">Chương trình “Sản phẩm tin cậy, dịch vụ hoàn hảo, nhãn hiệu ưa dùng năm 2017 từ tạp chí Sở hữu Trí tuệ và Sáng tạo</p>
-                    <ul>
-                        <li><span><b>THƯƠNG HIỆU DẪN ĐẦU VIỆT NAM</b></span></li>
-                    </ul>
-                    <p class="m-0">Năm 2018 nhận cúp vàng “Thương hiệu dẫn đầu Việt Nam”</p>
+                <div class="col-sm-12 col-md-6 d-flex align-items-center">
+                    <div>
+                        <h1 class="text-red bolder">VỀ CHÚNG TÔI</h1>
+                        <p class="m-0">Trung tâm Nhật ngữ SOFL thành lập năm 2008, được cấp giấy phép Đào tạo số 2330/QĐ – SGD & ĐT Hà Nội của Sở giáo dục và Đào tạo Hà Nội. Trải qua 13 năm hoạt động, với bao nỗ lực không ngừng nghỉ, đến nay SOFL đã có 9 cơ sở tại Hà Nội, Tp. Hồ Chí Minh và Ninh Bình cùng 2 giải thưởng danh giá:</p>
+                        <ul>
+                            <li><span><b>CHỨNG NHẬN DỊCH VỤ HOÀN HẢO</b></span></li>
+                        </ul>
+                        <p class="m-0">Chương trình “Sản phẩm tin cậy, dịch vụ hoàn hảo, nhãn hiệu ưa dùng năm 2017 từ tạp chí Sở hữu Trí tuệ và Sáng tạo</p>
+                        <ul>
+                            <li><span><b>THƯƠNG HIỆU DẪN ĐẦU VIỆT NAM</b></span></li>
+                        </ul>
+                        <p class="m-0">Năm 2018 nhận cúp vàng “Thương hiệu dẫn đầu Việt Nam”</p>
+                    </div>
                 </div>
             </div>
             <div id="journey" class="center pt-4 pb-4">
@@ -60,7 +62,7 @@
                         </div>
                         <div class="timeline__img">
                             <img src="https://trungtamnhatngu.edu.vn/gioi-thieu/uploads/slides/002.png" alt="">
-                            <p class="l-2"><b>2008</b></p>
+                            <p class="l-2 even_year"><b>2008</b></p>
                         </div>
                         <div class="timeline__content text-center text-white">
                             <h3>THÀNH LẬP</h3>
@@ -88,7 +90,7 @@
                         </div>
                         <div class="timeline__img">
                             <img src="https://trungtamnhatngu.edu.vn/gioi-thieu/uploads/slides/002.png" alt="">
-                            <p class="l-2"><b>2008</b></p>
+                            <p class="l-2 even_year"><b>2008</b></p>
                         </div>
                         <div class="timeline__content text-center text-white">
                             <h3>THÀNH LẬP</h3>
@@ -99,9 +101,11 @@
                     </div>
                 </div>
             </div>
-            <div id="view-point" class="view-point d-flex mw-1200 center mt-4 mb-4">
-                <img class="w-50" src="https://trungtamnhatngu.edu.vn/gioi-thieu/uploads/slides/trung-tam-nhat-ngu-sofl-tam-nhin.jpg" alt="">
-                <div class="d-flex align-items-center m-l-4">
+            <div id="view-point" class="view-point mw-1200 center mt-4 mb-4 col-sm-12 row">
+                <div class="col-sm-12 col-md-6 mb-2 p-0">
+                    <img class="w-100" src="https://trungtamnhatngu.edu.vn/gioi-thieu/uploads/slides/trung-tam-nhat-ngu-sofl-tam-nhin.jpg" alt="">
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
                     <div>
                         <span class="text-italic">Tầm nhìn & Sứ mệnh</span>
                         <h1 class="text-red">TẦM NHÌN</h1>
@@ -110,9 +114,9 @@
                 </div>
             </div>
             <div id="su-menh" class="su-menh mw-1200 center mt-4 mb-4">
-                <div class="text-center">
+                <!-- <div class="text-center">
                     <span class="text-italic">Tầm nhìn & Sứ mệnh</span>
-                </div>
+                </div> -->
                 <div class="text-center">
                     <h1 class="text-red">SỨ MỆNH</h1>
                 </div>
@@ -150,57 +154,6 @@
                             <p>Tại SOFL tạo ra môi trường làm việc Tích cực – Công bằng – Kỷ luật. Nhân viên có cơ hội trau dồi khả năng ngoại ngữ để phát triển bản thân lâu dài</p>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div id="gia_tri_cot_loi" class="gia_tri_cot_loi d-flex">
-                <div class="w-40">
-                    <img width="100%" src="https://trungtamnhatngu.edu.vn/gioi-thieu/uploads/slides/464.png" alt="">
-                </div>
-                <div class="w-40 bg-pink p-4">
-                    <h1 class="text-red my-3">GIÁ TRỊ CỐT LÕI</h1>
-                    <div class="d-flex">
-                        <div class="w-50">
-                            <div>
-                                <img width="56px" src="https://trungtamnhatngu.edu.vn/gioi-thieu/uploads/slides/381.png" alt="">
-                            </div>
-                            <div>
-                                <h3>Trách nhiệm</h3>
-                                <p>SOFL cam kết trách nhiệm với tất cả học viên và làm hết mình vì trách nhiệm</p>
-                            </div>
-                        </div>
-                        <div class="w-50">
-                            <div>
-                                <img width="56px" src="https://trungtamnhatngu.edu.vn/gioi-thieu/uploads/slides/381.png" alt="">
-                            </div>
-                            <div>
-                                <h3>Tận tâm</h3>
-                                <p>SOFL dành tất cả tình cảm đồng hành cùng học viên đến cùng, và cùng nhau đạt được mục tiêu</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="w-50">
-                            <div>
-                                <img width="56px" src="https://trungtamnhatngu.edu.vn/gioi-thieu/uploads/slides/381.png" alt="">
-                            </div>
-                            <div>
-                                <h3>Hiệu quả</h3>
-                                <p>Chất lượng công việc và  sự hài lòng của khách hàng là tất cả thước đo</p>
-                            </div>
-                        </div>
-                        <div class="w-50">
-                            <div>
-                                <img width="56px" src="https://trungtamnhatngu.edu.vn/gioi-thieu/uploads/slides/381.png" alt="">
-                            </div>
-                            <div>
-                                <h3>Luôn đổi mới</h3>
-                                <p>SOFL và tất cả các học viên luôn cố gắng để trở thành phiên bản tốt nhất của chính mình</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="image__right w-20">
-                    <img width="100%" height="100%" src="https://trungtamnhatngu.edu.vn/gioi-thieu/themes/default/images/bg-gtcl.png" alt="">
                 </div>
             </div>
             <div id="product__service" class="product__service mw-1200 center mt-4 mb-4">
@@ -266,6 +219,74 @@
                     </div>
                 </div>
             </div>
+            <div id="product__service_sp">
+                <CCarousel controls indicators>
+                    <CCarouselItem>
+                        <div class="b_radius border box-sd h-100">
+                            <div>
+                                <img class="b_radius w-100" src="https://trungtamnhatngu.edu.vn/gioi-thieu/uploads/slides/22.08.12_offline.png" alt="">
+                            </div>
+                            <div class="d-flex m-3">
+                                <div>
+                                    <img class="width_logo_sp" src="https://trungtamnhatngu.edu.vn/gioi-thieu/uploads/slides/396.png" alt="">
+                                </div>
+                                <div class="m-l-4">
+                                    <h4 class="text-red">SOFL OFFLINE</h4>
+                                    <p>Thành lập năm 2008, sau hơn 13 năm trưởng thành và phát triển, hiện tại Trung tâm Nhật ngữ SOFL đã có 9 cơ sở đào tạo trải khắp từ Bắc vào Nam và luôn phấn đấu không ngừng trở thành trung tâm đào tạo tiếng Nhật uy tín, chất lượng hàng đầu tại Việt Nam.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </CCarouselItem>
+                    <CCarouselItem>
+                        <div class="b_radius border box-sd h-100">
+                            <div>
+                                <img class="b_radius w-100" src="https://trungtamnhatngu.edu.vn/gioi-thieu/uploads/slides/22.08.12_truc-tuyen.png" alt="">
+                            </div>
+                            <div class="d-flex m-3">
+                                <div>
+                                    <img class="width_logo_sp" src="https://trungtamnhatngu.edu.vn/gioi-thieu/uploads/slides/396.png" alt="">
+                                </div>
+                                <div class="m-l-4">
+                                    <h4 class="text-red">SOFL TRỰC TUYẾN</h4>
+                                    <p>Cùng với sự phát triển của công nghệ, áp dụng nền tảng học tập mới 4.0. SOFL đã mở ra các khóa đào tạo tiếng Nhật trực tuyến dành cho các học viên chưa có đủ thời gian tham gia các lớp học offline với lộ trình và chất lượng như của khóa học offline.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </CCarouselItem>
+                    <CCarouselItem>
+                        <div class="b_radius border box-sd h-100">
+                            <div>
+                                <img class="b_radius w-100" src="https://trungtamnhatngu.edu.vn/gioi-thieu/uploads/slides/22.08.12_doanh-nghiep.png" alt="">
+                            </div>
+                            <div class="d-flex m-3">
+                                <div>
+                                    <img class="width_logo_sp" src="https://trungtamnhatngu.edu.vn/gioi-thieu/uploads/slides/396.png" alt="">
+                                </div>
+                                <div class="m-l-4">
+                                    <h4 class="text-red">SOFL DOANH NGHIỆP</h4>
+                                    <p>Lớp học được thiết kế dành riêng cho các doanh nghiệp, trang bị cho nhân sự kiến thức – kỹ năng về tiếng Nhật(theo nhu cầu của doanh nghiệp) để hoàn thành tốt vai trò và nhiệm vụ của bản thân đối với công việc.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </CCarouselItem>
+                    <CCarouselItem>
+                        <div class="b_radius border box-sd h-100">
+                            <div>
+                                <img class="b_radius w-100" src="https://trungtamnhatngu.edu.vn/gioi-thieu/uploads/slides/22.08.12_du-hoc-nhat.png" alt="">
+                            </div>
+                            <div class="d-flex m-3">
+                                <div>
+                                    <img class="width_logo_sp" src="https://trungtamnhatngu.edu.vn/gioi-thieu/uploads/slides/396.png" alt="">
+                                </div>
+                                <div class="m-l-4">
+                                    <h4 class="text-red">SOFL DU HỌC</h4>
+                                    <p>Với mục tiêu làm cầu nối cho học sinh, sinh viên Việt Nam có cơ hội học tập tại Nhật, đến nay SOFL đã liên kết với hơn 20 trường Đại học Nhật Bản mở ra cánh cửa cho hàng triệu học viên có nhu cầu đi du học Nhật Bản.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </CCarouselItem>
+                </CCarousel>
+            </div>
             <div class="quality_lecturer mw-1200 center mt-5 mb-4">
                 <h1 class="text-center text-red mb-4">CHẤT LƯỢNG GIẢNG VIÊN</h1>
                 <div class="text-center mb-5">
@@ -305,8 +326,8 @@
                 </div>
                 <div class="achiverment mw-1200 center">
                     <h1 class="text-white text-center py-5 m-0">THÀNH TỰU NỔI BẬT</h1>
-                    <div class="d-flex flex-grap pb-4">
-                        <div class="position-relative w-475">
+                    <div class="d-flex flex-grap pb-4 row">
+                        <div class="position-relative  col-sm-12 col-md-6 pb-4">
                             <img width="100%" src="https://trungtamnhatngu.edu.vn/gioi-thieu/uploads/slides/frame-412-1.png" alt="">
                             <div class="infor mau1">
                                 <span>150000+</span>
@@ -315,7 +336,7 @@
                                 <p>Học viên Offline và Online</p>
                             </div>
                         </div>
-                        <div class="position-relative w-475">
+                        <div class="position-relative  col-sm-12 col-md-6 pb-4">
                             <img width="100%" src="https://trungtamnhatngu.edu.vn/gioi-thieu/uploads/slides/frame-412-2.png" alt="">
                             <div class="infor mau2">
                                 <span>120000+</span>
@@ -324,9 +345,7 @@
                                 <p>Học viên đã đỗ JLPT</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="d-flex flex-grap">
-                        <div class="position-relative w-475">
+                        <div class="position-relative col-sm-12 col-md-6 pb-4">
                             <img width="100%" src="https://trungtamnhatngu.edu.vn/gioi-thieu/uploads/slides/frame-413-2.png" alt="">
                             <div class="infor mau1">
                                 <span>200+</span>
@@ -335,7 +354,7 @@
                                 <p>Học viên du học Nhật Bản hàng năm</p>
                             </div>
                         </div>
-                        <div class="position-relative w-475">
+                        <div class="position-relative col-sm-12 col-md-6">
                             <img width="100%" src="https://trungtamnhatngu.edu.vn/gioi-thieu/uploads/slides/frame-413-1.png" alt="">
                             <div class="infor mau2">
                                 <span>50+</span>
@@ -352,9 +371,9 @@
                 <img width="100%" src="https://trungtamnhatngu.edu.vn/gioi-thieu/uploads/slides/frame-453.png"/>
             </div>
         </div>
-        <div id="footer" class="d-flex">
-            <div class="d-flex mw-1200 center py-5">
-                <div class="w-40">
+        <div id="footer">
+            <div class="row mw-1200 center py-5">
+                <div class="col-sm-12 col-md-8">
                     <img src="https://trungtamnhatngu.edu.vn/hoc-tieng-nhat-truc-tuyen-online/uploads/nhat-ngu-sofl.png" alt=""/>
                     <h1 class="text-white">Hệ thống cơ sở</h1>
                     <p class="text-white">CS1 : Số 365 Phố Vọng - Đồng Tâm - Hai Bà Trưng - Hà Nội</p>
@@ -363,11 +382,8 @@
                     <p class="text-white">CS4 : Số 516 Nguyễn Văn Cừ - Gia Thuỵ - Long Biên - Hà Nội</p>
                     <p class="text-white">CS5 : Số 145 Nguyễn Chí Thanh - Phường 9 - Q. 5 - TP. HCM</p>
                 </div>
-                <div class="google-map w-35 mx-2">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7449.178113452296!2d105.79664727666818!3d21.00910375967507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aca120613f6f%3A0x11aab8152a382220!2zVHJ1bmcgSG_DoCwgQ-G6p3UgR2nhuqV5LCBIYW5vaSwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1669535776557!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-                <div class="w-25">
-                    <div class="telephone d-flex border b_radius">
+                <div class="col-sm-12 col-md-4">
+                    <div class="telephone d-flex border b_radius mb-2">
                         <div class="bg-telephone m-l-4"></div>
                         <div class="m-l-4">
                             <p style="margin-top: 15px"><b>HÀ NỘI : 1900-986.845</b></p>
@@ -399,10 +415,11 @@
 </template>
 
 <script>
+import $ from "jquery";
 export default {
     data() {
         return{
-
+            showMenuNav: false
         }
     },
     created(){
@@ -412,7 +429,18 @@ export default {
         scrollToCourseIntro(id) {
             const el = document.getElementById(id);
             el.scrollIntoView({ behavior: "smooth", block: 'start', inline: "nearest"});
+            this.showMenu();
         },
+        showMenu() {
+            this.showMenuNav = !this.showMenuNav
+            if(this.showMenuNav) {
+                $('#item_header').removeClass('d_none_menu');
+                $('#item_header').addClass('show_menu');
+            } else {
+                $('#item_header').removeClass('show_menu');
+                $('#item_header').addClass('d_none_menu');
+            }
+        }
     }
 }
 </script>
